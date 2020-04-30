@@ -1,0 +1,8 @@
+<button nz-button nzType="primary" (click)="addPerson('boy')">新增男性记录</button>
+<button nz-button nzType="primary" (click)="addPerson('girl')">新增女性记录</button>
+<button nz-button nzType="primary" (click)="getValueList()">获取值集合</button>
+<button nz-button nzType="danger" (click)="clear()">清空全部记录</button>
+<br /> 获取结果集:{{value | json }}
+<div class="dynamic-component-container">
+    <ng-template #addPersonContainer></ng-template>
+</div>
