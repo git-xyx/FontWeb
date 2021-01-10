@@ -1,0 +1,32 @@
+<div class="login-contain">
+    <div class="login-box">
+        <h2 (click)="isVisible =true">our-travel</h2>
+        <!-- <form> -->
+        <!-- <div class="login-field">
+            <input type="text" name="" required="" [(ngModel)]="username" />
+            <label>Username</label>
+        </div>
+        <div class="login-field">
+            <input type="password" name="" required="" [(ngModel)]="password" />
+            <label>Password</label>
+        </div>
+        <div class="login-submit">
+            <button type="submit" (click)="login()">登陆</button>
+            <button type="submit" (click)="username='';password=''">重置</button>
+        </div> -->
+        <!-- </form> -->
+    </div>
+    <div [ngClass] = "{'box':true,'content':true}" ></div>
+
+</div>
+
+<nz-modal [(nzVisible)]="isVisible" nzTitle="The first Modal" (nzOnCancel)="handleCancel()" (nzOnOk)="handleOk()">
+    <p>Content one</p>
+    <p>Content two</p>
+    <p>Content three</p>
+</nz-modal>
+<!-- <nz-drawer [nzClosable]="false" [nzVisible]="isVisible" nzPlacement="right" nzTitle="Basic Drawer" (nzOnClose)="handleOk()">
+    <p>Some contents...</p>
+    <p>Some contents...</p>
+    <p>Some contents...</p>
+</nz-drawer> -->
