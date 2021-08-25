@@ -1,10 +1,8 @@
 <template>
   <div class="home-container">
     <el-container>
-      <el-header class="header">
-        <div class="header-div">
-          <span>---------Trav---------</span>
-        </div>
+      <el-header style="padding: 0; margin-bottom: 10px">
+        <ComTop></ComTop>
       </el-header>
       <el-container class="bottomer">
         <el-aside width="200px">
@@ -19,11 +17,12 @@
 </template>
 
 <script>
-import Aside from "./aside.vue";
-import Main from "./main.vue";
+import ComTop from "../com-top.vue";
+import Aside from "./css-aside.vue";
+import Main from "./css-main.vue";
 export default {
-  components: { Aside, Main },
-  name: "HomePage",
+  components: { ComTop, Aside, Main },
+  name: "CssIndex",
   data() {
     return {};
   },
@@ -34,22 +33,6 @@ export default {
 .home-container {
   min-height: 700px;
   background-color: #e7eaed;
-  // 固定头部栏
-  .header {
-    margin-bottom: 10px;
-    background: linear-gradient(to right, #032e5b, #bdebfa);
-
-    .header-div {
-      display: flex;
-      align-items: center;
-      width: 100%;
-      height: 100%;
-      span {
-        font-size: 20px;
-        color: green;
-      }
-    }
-  }
   .el-aside {
     height: 610px;
     background-color: #fff;

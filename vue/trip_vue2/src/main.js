@@ -19,12 +19,17 @@ Vue.prototype.$post = post;
 Vue.prototype.$get = get;
 Vue.prototype.$filePost = filePost;
 
+import Driver from "driver.js"; // import driver.js
+import "driver.js/dist/driver.min.css"; // import driver.js css
 
-Vue.config.productionTip = false
+Vue.prototype.$dri = new Driver();
+
+
+Vue.config.productionTip = false;
 
 new Vue({
   // el: '#app',
   render: h => h(App),
   //一定要注入到vue的实例对象上
-  router
+  router: router
 }).$mount('#app')

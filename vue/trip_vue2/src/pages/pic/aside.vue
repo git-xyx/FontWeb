@@ -1,11 +1,5 @@
 <template>
   <div class="aside-container">
-    <!-- <el-tree
-      class="aside"
-      :data="menuList"
-      :props="defaultProps"
-      @node-click="handleNodeClick"
-    ></el-tree> -->
     <div
       class="menu-item"
       :class="{ choosed: currentMenu.menuId == item.menuId }"
@@ -27,10 +21,6 @@ export default {
   data() {
     return {
       menuList: [],
-      defaultProps: {
-        children: "children",
-        label: "menuNm",
-      },
       currentMenu: {
         menuId: "",
         menuNm: "",
@@ -43,7 +33,7 @@ export default {
   methods: {
     // 获取菜单内容
     getMenuList() {
-      this.$post(`${commonJs.URL}/menu/query`, {}).then((res) => {
+      this.$post(`${commonJs.URL}/menu/query`, { type: "pic" }).then((res) => {
         if (res.length) {
           this.menuList = res;
           res.length && this.handleNodeClick(res[0]);
@@ -60,7 +50,7 @@ export default {
 };
 </script>
 
-<style  lang="less" scoped>
+<style lang="less" scoped>
 .aside-container {
   width: 176px;
   padding: 12px;
