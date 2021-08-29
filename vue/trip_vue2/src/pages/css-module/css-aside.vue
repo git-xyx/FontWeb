@@ -32,9 +32,9 @@ export default {
   },
   mounted: function () {
     if (this.cssList[0]) {
-      // setTimeout(() => {
-      this.handleNodeClick(this.cssList[0]);
-      // }, 0);
+      setTimeout(() => {
+        this.handleNodeClick(this.cssList[0]);
+      }, 0);
     }
   },
   methods: {
