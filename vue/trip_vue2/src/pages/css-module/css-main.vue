@@ -13,7 +13,7 @@
       <animation></animation>
     </div>
     <div v-if="currentMenu.menuId == 'css_transform'">
-      <elementCenter></elementCenter>
+      <transform></transform>
     </div>
   </div>
 </template>
@@ -24,10 +24,11 @@ import unfoldVue from "./list-pages/unfold.vue";
 import elementCenter from "./list-pages/elementCenter.vue";
 import transtion from "./list-pages/transtion.vue";
 import animation from "./list-pages/animation.vue";
+import transform from "./list-pages/transform.vue";
 
 export default {
   name: "Main",
-  components: { unfoldVue, elementCenter, transtion, animation },
+  components: { unfoldVue, elementCenter, transtion, animation, transform },
   data() {
     return {
       currentMenu: {
