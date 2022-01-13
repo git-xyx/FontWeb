@@ -44,7 +44,7 @@ export default {
     handleNodeClick(data) {
       this.currentMenu.menuId = data.menuId;
       this.currentMenu.menuNm = data.menuNm;
-      eventBus.$emit("menuNew", data);
+      eventBus.$emit("picMenuEmit", data);
     },
   },
 };

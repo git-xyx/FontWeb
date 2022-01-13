@@ -6,7 +6,7 @@ import home from './pages/home.vue'
 //引用pic页面
 import pic from './pages/pic/pic-index.vue';
 import cssModule from './pages/css-module/css-index.vue';
-
+import JsModule from './pages/js-module/js-index.vue';
 
 //第三方库需要use一下才能用
 Vue.use(VueRouter)
@@ -17,12 +17,14 @@ const routeList = [
     { path: '', redirect: 'home', pathMatch: 'full' },
     { path: '/home', component: home },
     { path: '/pic', component: pic },
-    { path: '/css-module', component: cssModule },
+    { path: '/css-module/:id', component: cssModule },
+    { path: '/js-module', component: JsModule },
     { path: '*', redirect: 'home' },
 ]
 
 //实例化VueRouter并将routes添加进去
 const router = new VueRouter({
+    // mode: 'history', //默认hash模式
     routes: routeList
 });
 

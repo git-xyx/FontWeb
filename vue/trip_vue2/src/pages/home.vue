@@ -20,7 +20,8 @@ export default {
     return {
       menuList: [
         { name: "图片集合", path: "/pic" },
-        { name: "css-效果模块", path: "/css-module" },
+        { name: "css-效果模块", path: "/css-module/css_transtion" },
+        { name: "js-模块", path: "/js-module" },
       ],
     };
   },

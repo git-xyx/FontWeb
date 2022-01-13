@@ -18,15 +18,14 @@
 
 <script>
 import ComTop from "../com-top.vue";
-import Aside from "./css-aside.vue";
-import Main from "./css-main.vue";
+import Aside from "./js-aside.vue";
+import Main from "./js-main.vue";
 export default {
   components: { ComTop, Aside, Main },
-  name: "CssIndex",
+  name: "JsIndex",
   data() {
     return {};
   },
-  mounted() {},
 };
 </script>
 

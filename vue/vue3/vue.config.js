@@ -46,5 +46,14 @@ module.exports = {
         before: app => {
             // `app` 是一个 express 实例
         }
+    },
+
+    pluginOptions: {
+        'style-resources-loader': {
+            preProcessor: 'less',
+            patterns: [
+                // path.resolve(__dirname, './src/assets/css/themes.less')
+            ]
+        }
     }
 }

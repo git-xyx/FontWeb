@@ -50,7 +50,7 @@ export default {
     };
   },
   mounted() {
-    eventBus.$on("menuNew", (data) => {
+    eventBus.$on("picMenuEmit", (data) => {
       this.currentMenu.menuId = data.menuId;
       this.currentMenu.menuNm = data.menuNm;
       this.getPicList();

@@ -20,7 +20,9 @@ export default {
     background: rgb(153, 211, 18);
 
     position: absolute;
-    animation: mymove 5s infinite;
+    animation: mymove 3s infinite;
+    // animation-iteration-count: infinite;
+    // animation-direction: alternate;
     animation-timing-function: cubic-bezier(0.25, 0.82, 0.165, 1);
   }
 

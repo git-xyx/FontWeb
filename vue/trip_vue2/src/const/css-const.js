@@ -15,6 +15,12 @@ export const CSS_MENUS = [
     }, {
         menuId: "css_transform",
         menuNm: "transform转变，变化",
+    }, {
+        menuId: "css_vertical_align",
+        menuNm: "vertical_align垂直对齐",
+    }, {
+        menuId: "css_flex",
+        menuNm: "flex布局",
     }
 
 ];

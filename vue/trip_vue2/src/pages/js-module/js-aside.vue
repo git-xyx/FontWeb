@@ -3,7 +3,7 @@
     <div
       class="menu-item"
       :class="{ choosed: currentMenu.menuId == item.menuId }"
-      v-for="item in cssList"
+      v-for="item in jsList"
       :key="item.id"
       @click="handleNodeClick(item)"
     >
@@ -14,12 +14,13 @@
 
 <script>
 import eventBus from "../../utils/eventBus";
-import { CSS_MENUS } from "../../const/css-const";
+import { JS_MENUS } from "../../const/js-const";
+
 export default {
   name: "Aside",
   data() {
     return {
-      cssList: [],
+      jsList: [],
       currentMenu: {
         menuId: "",
         menuNm: "",
@@ -27,17 +28,12 @@ export default {
     };
   },
   created: function () {
-    this.cssList = CSS_MENUS;
+    this.jsList = JS_MENUS;
   },
   mounted: function () {
-    if (this.cssList[0]) {
+    if (this.jsList[0]) {
       setTimeout(() => {
-        console.log(this.$router);
-        if (this.$route.params && this.$route.params.id) {
-          this.handleNodeClick({ menuId: this.$route.params.id, menuNm: "" });
-        } else {
-          this.handleNodeClick(this.cssList[0]);
-        }
+        this.handleNodeClick(this.jsList[0]);
       }, 0);
     }
   },
@@ -46,7 +42,7 @@ export default {
     handleNodeClick(data) {
       this.currentMenu.menuId = data.menuId;
       this.currentMenu.menuNm = data.menuNm;
-      eventBus.$emit("cssMenuEmit", data);
+      eventBus.$emit("jsMenuEmit", data);
     },
   },
 };

@@ -1,17 +1,12 @@
 import { createRouter, createWebHashHistory } from "vue-router";
-const home = () => import("../components/home");
-const login = () => import("../components/login");
+const debounce = () => import("../components/debounce");
 const routerHistory = createWebHashHistory();
 
 const routes = [
-    { path: '', redirect: 'home' },
+    { path: '', redirect: 'debounce' },
     {
-        path: '/home',
-        component: home
-    },
-    {
-        path: '/login',
-        component: login
+        path: '/debounce',
+        component: debounce
     }
 ]
 export const router = createRouter({

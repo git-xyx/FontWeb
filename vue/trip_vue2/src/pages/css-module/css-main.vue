@@ -15,6 +15,12 @@
     <div v-if="currentMenu.menuId == 'css_transform'">
       <transform></transform>
     </div>
+    <div v-if="currentMenu.menuId == 'css_vertical_align'">
+      <verticalAlign></verticalAlign>
+    </div>
+    <div v-if="currentMenu.menuId == 'css_flex'">
+      <flex></flex>
+    </div>
   </div>
 </template>
 
@@ -25,10 +31,20 @@ import elementCenter from "./list-pages/elementCenter.vue";
 import transtion from "./list-pages/transtion.vue";
 import animation from "./list-pages/animation.vue";
 import transform from "./list-pages/transform.vue";
+import verticalAlign from "./list-pages/vertical-align.vue";
+import flex from "./list-pages/flex.vue";
 
 export default {
   name: "Main",
-  components: { unfoldVue, elementCenter, transtion, animation, transform },
+  components: {
+    unfoldVue,
+    elementCenter,
+    transtion,
+    animation,
+    transform,
+    verticalAlign,
+    flex,
+  },
   data() {
     return {
       currentMenu: {
@@ -38,7 +54,8 @@ export default {
     };
   },
   mounted() {
-    eventBus.$on("menuNew", (data) => {
+    eventBus.$on("cssMenuEmit", (data) => {
+      console.log(data);
       this.currentMenu.menuId = data.menuId;
       this.currentMenu.menuNm = data.menuNm;
     });
