@@ -1,5 +1,4 @@
 // 防抖
-let debounceTimer = null;
 export function comDebounce(func, waitTime) {
     // if (debounceTimer) {
     //     clearTimeout(debounceTimer);
@@ -7,6 +6,7 @@ export function comDebounce(func, waitTime) {
     // debounceTimer = setTimeout(() => {
     //     func.apply(this)
     // }, waitTime);
+    let debounceTimer = null;
     return function () {
         const argu = arguments;
         if (debounceTimer) {
@@ -19,8 +19,8 @@ export function comDebounce(func, waitTime) {
 }
 
 // 节流
-let throttleTimer = null;
 export function comThrottle(func, waitTime) {
+    let throttleTimer = null;
     return function () {
         const argu = arguments;
         if (throttleTimer) {

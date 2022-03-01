@@ -9,6 +9,7 @@
     >
       {{ item.menuNm }}
     </div>
+    <div @click="getMenuList()">get+</div>
   </div>
 </template>
 
