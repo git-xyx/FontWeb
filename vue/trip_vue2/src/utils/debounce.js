@@ -19,8 +19,8 @@ export function comDebounce(func, waitTime) {
 }
 
 // 节流
+let throttleTimer = null;
 export function comThrottle(func, waitTime) {
-    let throttleTimer = null;
     return function () {
         const argu = arguments;
         if (throttleTimer) {

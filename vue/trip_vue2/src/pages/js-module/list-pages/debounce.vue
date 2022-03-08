@@ -36,14 +36,18 @@ export default {
 
       clickDate2: null,
       clickTimes2: (Number = 0),
+      func: (Function = null),
     };
   },
-  mounted() {},
+  mounted() {
+    this.func = comDebounce(this.doDebEvent, 2000);
+  },
 
   methods: {
     //点击触发函数  防抖
     debFun() {
-      comDebounce(this.doDebEvent, 500)(new Date());
+      this.func();
+      // comDebounce(this.doDebEvent, 2000)(new Date());
     },
 
     doDebEvent(randomTime) {

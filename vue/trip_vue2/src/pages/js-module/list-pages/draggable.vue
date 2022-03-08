@@ -116,7 +116,7 @@ export default {
 <style lang="less" scoped>
 .left {
   padding: 10px;
-  position: absolute;
+  // position: absolute;
   width: 270px;
   background: rgb(247, 202, 202);
   top: 0;
