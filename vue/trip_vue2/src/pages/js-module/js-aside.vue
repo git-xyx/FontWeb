@@ -2,9 +2,9 @@
   <div class="aside-container">
     <div
       class="menu-item"
-      :class="{ choosed: currentMenu.menuId == item.menuId }"
+      v-bind:class="{ choosed: currentMenu.menuId == item.menuId }"
       v-for="item in jsList"
-      :key="item.id"
+      v-bind:key="item.id"
       @click="handleNodeClick(item)"
     >
       {{ item.menuNm }}
@@ -49,17 +49,4 @@ export default {
 </script>
 
 <style lang="less" scoped>
-.aside-container {
-  width: 176px;
-  padding: 12px;
-  text-align: left;
-
-  .menu-item {
-    cursor: pointer;
-    &:hover,
-    &.choosed {
-      background: #d9dfe8;
-    }
-  }
-}
 </style>

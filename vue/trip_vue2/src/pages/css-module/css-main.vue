@@ -21,6 +21,9 @@
     <div v-if="currentMenu.menuId == 'css_flex'">
       <flex></flex>
     </div>
+    <div v-if="currentMenu.menuId == 'css_sticky'">
+      <sticky></sticky>
+    </div>
   </div>
 </template>
 
@@ -33,6 +36,7 @@ import animation from "./list-pages/animation.vue";
 import transform from "./list-pages/transform.vue";
 import verticalAlign from "./list-pages/vertical-align.vue";
 import flex from "./list-pages/flex.vue";
+import sticky from "./list-pages/sticky.vue";
 
 export default {
   name: "Main",
@@ -44,6 +48,7 @@ export default {
     transform,
     verticalAlign,
     flex,
+    sticky,
   },
   data() {
     return {
@@ -65,7 +70,4 @@ export default {
 </script>
 
 <style lang="less" scoped>
-.main-container {
-  padding: 50px 150px;
-}
 </style>

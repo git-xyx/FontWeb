@@ -1,11 +1,11 @@
 <template>
   <div class="home-container">
     <el-container>
-      <el-header style="padding: 0; margin-bottom: 10px">
+      <el-header class="com-top-header">
         <ComTop></ComTop>
       </el-header>
-      <el-container class="bottomer">
-        <el-aside width="200px">
+      <el-container class="com-main-area">
+        <el-aside class="com-right-menu">
           <Aside></Aside>
         </el-aside>
         <el-main>
@@ -42,10 +42,6 @@ export default {
     padding: 0 20px;
     margin: 0 20px;
     background-color: #fff;
-  }
-  // 下方部分
-  .bottomer {
-    margin: 0 20px;
   }
 }
 </style>

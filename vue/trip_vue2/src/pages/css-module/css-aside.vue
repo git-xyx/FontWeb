@@ -53,17 +53,4 @@ export default {
 </script>
 
 <style lang="less" scoped>
-.aside-container {
-  width: 176px;
-  padding: 12px;
-  text-align: left;
-
-  .menu-item {
-    cursor: pointer;
-    &:hover,
-    &.choosed {
-      background: #d9dfe8;
-    }
-  }
-}
 </style>

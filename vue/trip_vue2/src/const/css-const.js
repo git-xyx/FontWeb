@@ -21,6 +21,10 @@ export const CSS_MENUS = [
     }, {
         menuId: "css_flex",
         menuNm: "flex布局",
+    }, {
+        menuId: "css_sticky",
+        menuNm: "sticky布局",
     }
+
 
 ];

@@ -1,5 +1,6 @@
 import Vue from 'vue';
 import App from './App.vue';
+import './static/css/global.less' /*引入公共样式*/
 //引用router.js
 import routerSelf from './router.js';
 // element-ui

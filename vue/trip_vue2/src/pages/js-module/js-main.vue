@@ -40,7 +40,4 @@ export default {
 </script>
 
 <style lang="less" scoped>
-.main-container {
-  padding: 50px 150px;
-}
 </style>
