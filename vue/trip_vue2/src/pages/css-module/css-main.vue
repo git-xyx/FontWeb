@@ -24,6 +24,14 @@
     <div v-if="currentMenu.menuId == 'css_sticky'">
       <sticky></sticky>
     </div>
+    <div v-if="currentMenu.menuId == 'css_bfc'">
+      <bfc></bfc>
+    </div>
+
+    <!-- 特效区 -->
+    <div v-if="currentMenu.menuId == 'css_see_1'">
+      <see1></see1>
+    </div>
   </div>
 </template>
 
@@ -37,6 +45,8 @@ import transform from "./list-pages/transform.vue";
 import verticalAlign from "./list-pages/vertical-align.vue";
 import flex from "./list-pages/flex.vue";
 import sticky from "./list-pages/sticky.vue";
+import bfc from "./list-pages/bfc.vue";
+import see1 from "./list-pages/see_1.vue";
 
 export default {
   name: "Main",
@@ -49,6 +59,8 @@ export default {
     verticalAlign,
     flex,
     sticky,
+    bfc,
+    see1,
   },
   data() {
     return {
@@ -60,7 +72,6 @@ export default {
   },
   mounted() {
     eventBus.$on("cssMenuEmit", (data) => {
-      console.log(data);
       this.currentMenu.menuId = data.menuId;
       this.currentMenu.menuNm = data.menuNm;
     });

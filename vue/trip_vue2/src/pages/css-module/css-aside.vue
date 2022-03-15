@@ -32,7 +32,6 @@ export default {
   mounted: function () {
     if (this.cssList[0]) {
       setTimeout(() => {
-        console.log(this.$router);
         if (this.$route.params && this.$route.params.id) {
           this.handleNodeClick({ menuId: this.$route.params.id, menuNm: "" });
         } else {

@@ -9,7 +9,6 @@
     >
       {{ item.menuNm }}
     </div>
-    <div @click="getMenuList()">get+</div>
   </div>
 </template>
 
@@ -52,5 +51,4 @@ export default {
 </script>
 
 <style lang="less" scoped>
-
 </style>

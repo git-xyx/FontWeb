@@ -24,6 +24,12 @@ export const CSS_MENUS = [
     }, {
         menuId: "css_sticky",
         menuNm: "sticky布局",
+    }, {
+        menuId: "css_bfc",
+        menuNm: "BFC",
+    }, {
+        menuId: "css_see_1",
+        menuNm: "特效一",
     }
 
 
