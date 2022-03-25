@@ -9,5 +9,9 @@ export const JS_MENUS = [
     }, {
         menuId: "js_drag",
         menuNm: "drag",
+    }, {
+        menuId: "js_highquery",
+        menuNm: "十万请求",
     },
+
 ];

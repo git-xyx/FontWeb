@@ -9,6 +9,9 @@
     <div v-if="currentMenu.menuId == 'js_drag'">
       <drag></drag>
     </div>
+    <div v-if="currentMenu.menuId == 'js_highquery'">
+      <highquery></highquery>
+    </div>
   </div>
 </template>
 
@@ -17,10 +20,11 @@ import eventBus from "../../utils/eventBus";
 import debounce from "./list-pages/debounce.vue";
 import promise from "./list-pages/promise.vue";
 import drag from "./list-pages/draggable.vue";
-
+import highquery from "./list-pages/highquery.vue";
+highquery;
 export default {
   name: "Main",
-  components: { debounce, promise, drag },
+  components: { debounce, promise, drag, highquery },
   data() {
     return {
       currentMenu: {
