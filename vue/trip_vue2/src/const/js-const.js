@@ -12,6 +12,9 @@ export const JS_MENUS = [
     }, {
         menuId: "js_highquery",
         menuNm: "十万请求",
+    }, {
+        menuId: "js_wbsocket",
+        menuNm: "长连接wbs",
     },
 
 ];

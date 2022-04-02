@@ -12,6 +12,9 @@
     <div v-if="currentMenu.menuId == 'js_highquery'">
       <highquery></highquery>
     </div>
+    <div v-if="currentMenu.menuId == 'js_wbsocket'">
+      <wbsocket></wbsocket>
+    </div>
   </div>
 </template>
 
@@ -21,10 +24,11 @@ import debounce from "./list-pages/debounce.vue";
 import promise from "./list-pages/promise.vue";
 import drag from "./list-pages/draggable.vue";
 import highquery from "./list-pages/highquery.vue";
+import wbsocket from "./list-pages/wbsocket.vue";
 highquery;
 export default {
   name: "Main",
-  components: { debounce, promise, drag, highquery },
+  components: { debounce, promise, drag, highquery, wbsocket },
   data() {
     return {
       currentMenu: {
