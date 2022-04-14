@@ -15,6 +15,9 @@ export const JS_MENUS = [
     }, {
         menuId: "js_wbsocket",
         menuNm: "长连接wbs",
+    }, {
+        menuId: "js_bigupload",
+        menuNm: "大文件断点上传",
     },
 
 ];

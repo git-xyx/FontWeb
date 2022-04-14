@@ -13,7 +13,6 @@ export default {
     };
   },
   mounted() {
-    
     this.pro();
   },
 
@@ -66,8 +65,7 @@ export default {
         });
     },
 
-
-    // 
+    //
     async pro() {
       let result = await new Promise((resolve, reject) => {
         setTimeout(() => {
@@ -81,6 +79,4 @@ export default {
 </script>
 
 <style lang="less" scoped>
-.content {
-}
 </style>

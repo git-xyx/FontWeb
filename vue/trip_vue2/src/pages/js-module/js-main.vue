@@ -15,6 +15,9 @@
     <div v-if="currentMenu.menuId == 'js_wbsocket'">
       <wbsocket></wbsocket>
     </div>
+    <div v-if="currentMenu.menuId == 'js_bigupload'">
+      <bigupload></bigupload>
+    </div>
   </div>
 </template>
 
@@ -25,10 +28,11 @@ import promise from "./list-pages/promise.vue";
 import drag from "./list-pages/draggable.vue";
 import highquery from "./list-pages/highquery.vue";
 import wbsocket from "./list-pages/wbsocket.vue";
+import bigupload from "./list-pages/bigupload.vue";
 highquery;
 export default {
   name: "Main",
-  components: { debounce, promise, drag, highquery, wbsocket },
+  components: { debounce, promise, drag, highquery, wbsocket, bigupload },
   data() {
     return {
       currentMenu: {
