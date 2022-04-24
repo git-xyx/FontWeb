@@ -34,7 +34,7 @@ export default {
     setTimeoutPage() {
       // setTimeout分页渲染: 把10w按照每页数量limit分成总共Math.ceil(total / limit)页，
       // 然后利用setTimeout，每次渲染1页数据，这样的话，渲染出首页数据的时间大大缩减了
-      this.$post(`${commonJs.URL}/highquery/query`).then((res) => {
+      this.$post(`${commonJs.URL}/jsModule/highquery/query`).then((res) => {
         if (res.length) {
           const total = res.length;
           const page = 0;
@@ -59,7 +59,7 @@ export default {
     async setTimeoutQuery() {
       let container = document.getElementById("container");
 
-      const list = await this.$post(`${commonJs.URL}/highquery/query`);
+      const list = await this.$post(`${commonJs.URL}/jsModule/highquery/query`);
       console.log(list);
       const total = list.length;
       const page = 0;
@@ -83,7 +83,7 @@ export default {
     },
 
     requestAnimationFramePage() {
-      this.$post(`${commonJs.URL}/highquery/query`).then((res) => {
+      this.$post(`${commonJs.URL}/jsModule/highquery/query`).then((res) => {
         if (res.length) {
           const total = res.length;
           const page = 0;

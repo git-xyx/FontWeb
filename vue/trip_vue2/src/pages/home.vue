@@ -1,63 +1,82 @@
 <template>
-  <div class="root-container">
-    <div
-      class="menu-item"
-      v-for="(item, i) in menuList"
-      :key="i"
-      @click="menuClick(item)"
-    >
-      <span>
-        {{ item.name }}
-      </span>
+  <div class="home-container">
+    <div class="img-area">
+      <div class="img-div" v-for="(item, index) in 20" :key="index">
+        <img
+          class="img-item"
+          v-lazy="imgSrc + (index + 1) + '.jpeg'"
+          alt="defalu.jpg"
+        />
+      </div>
     </div>
   </div>
 </template>
 
 <script>
+import { commonJs } from "../const/index";
 export default {
   name: "home",
   data() {
     return {
-      menuList: [
-        { name: "图片集合", path: "/pic" },
-        { name: "css-效果模块", path: "/css-module/css_transtion" },
-        { name: "js-模块", path: "/js-module" },
-      ],
+      imgSrc: `${commonJs.URL}/images/home/`,
+      imgList: [],
     };
   },
+
   mounted() {
-    // this.$dri.highlight({
-    //   element: ".menu-item",
-    //   popover: {
-    //     title: "点击卡片",
-    //     description: "进入详情",
-    //   },
-    // });
+    this.getAllImg();
   },
+
   methods: {
-    menuClick(item) {
-      this.$router.push(item.path);
+    getAllImg() {
+      // this.$post(`${commonJs.URL}/home/img/all`).then((res) => {});
     },
+
+    // IntersectionObserver
+    // lazyLoad() {
+    //   // 推荐使用IntersectionObserver
+    //   let observer = new IntersectionObserver((entries, observe) => {
+    //     entries.forEach((item) => {
+    //       // 获取当前正在观察的元素
+    //       let target = item.target;
+    //       if (item.isIntersecting && target.dataset.src) {
+    //         target.src = target.dataset.src;
+    //         // 删除data-src属性
+    //         target.removeAttribute("data-src");
+    //         // 取消观察
+    //         observe.unobserve(item.target);
+    //       }
+    //     });
+    //   });
+    //   let imgs = document.querySelectorAll(".img-item");
+    //   imgs.forEach((item) => {
+    //     // 遍历观察元素
+    //     observer.observe(item);
+    //   });
+    // },
   },
 };
 </script>
 
 <style lang="less" scope>
-.root-container {
-  display: flex;
-  width: 100%;
-  padding: 30px;
-  .menu-item {
-    width: 220px;
-    height: 135px;
-    border: 1px solid;
-    margin: 0 20px 20px 0;
-    cursor: pointer;
-    &:hover {
-      background: rgb(138, 137, 141);
-    }
-    span {
-      line-height: 135px;
+.home-container {
+  // display: flex;
+  // width: 100%;
+  // padding: 30px;
+
+  .img-area {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .img-div {
+      width: 800px;
+      height: 350px;
+      margin: 30px;
+      .img-item {
+        width: 100%;
+        height: 100%;
+      }
     }
   }
 }

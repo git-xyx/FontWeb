@@ -233,7 +233,7 @@ export default {
         })
         .map(async ({ formData, index }) =>
           this.request({
-            url: `${commonJs.URL}/bigupload/`,
+            url: `${commonJs.URL}/jsModule/bigupload/`,
             data: formData,
             onProgress: this.createProgressHandler(this.data[index]),
             requestList: this.requestList,
@@ -249,7 +249,7 @@ export default {
     // 通知服务端合并切片
     async mergeRequest() {
       await this.request({
-        url: `${commonJs.URL}/bigupload/merge`,
+        url: `${commonJs.URL}/jsModule/bigupload/merge`,
         headers: {
           "content-type": "application/json",
         },
@@ -266,7 +266,7 @@ export default {
     // 没有才进行上传
     async verifyUpload(filename, fileHash) {
       const { data } = await this.request({
-        url: `${commonJs.URL}/bigupload/verify`,
+        url: `${commonJs.URL}/jsModule/bigupload/verify`,
         headers: {
           "content-type": "application/json",
         },

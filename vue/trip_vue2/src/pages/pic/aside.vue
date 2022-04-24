@@ -33,12 +33,14 @@ export default {
   methods: {
     // 获取菜单内容
     getMenuList() {
-      this.$post(`${commonJs.URL}/menu/query`, { type: "pic" }).then((res) => {
-        if (res.length) {
-          this.menuList = res;
-          res.length && this.handleNodeClick(res[0]);
+      this.$post(`${commonJs.URL}/pic/menu/query`, { type: "pic" }).then(
+        (res) => {
+          if (res.length) {
+            this.menuList = res;
+            res.length && this.handleNodeClick(res[0]);
+          }
         }
-      });
+      );
     },
     // 点击菜单展开
     handleNodeClick(data) {

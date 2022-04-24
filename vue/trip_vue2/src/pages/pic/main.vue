@@ -44,7 +44,7 @@ export default {
         menuId: "",
         menuNm: "",
       },
-      uploadUrl: `${commonJs.URL}/file/upload`,
+      uploadUrl: `${commonJs.URL}/pic/file/upload`,
       imgSrcList: [],
       fileList: [],
     };
@@ -59,7 +59,7 @@ export default {
   methods: {
     handleSuccess(response, file, fileList) {
       if (response.result) {
-        this.$post(`${commonJs.URL}/content/imgIdUpload`, {
+        this.$post(`${commonJs.URL}/pic/content/imgIdUpload`, {
           menuId: this.currentMenu.menuId,
           picId: response.result,
         }).then((res) => {});
@@ -69,7 +69,7 @@ export default {
     // 获取图片列表
     getPicList() {
       this.imgSrcList = [];
-      this.$filePost(`${commonJs.URL}/content/getImgList`, {
+      this.$filePost(`${commonJs.URL}/pic/content/getImgList`, {
         menuId: this.currentMenu.menuId,
       }).then((res) => {
         try {

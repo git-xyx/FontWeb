@@ -2,21 +2,9 @@
 
 #app {
     .home-container {
-        min-height      : 700px;
-        background-color: #e7eaed;
-
-        .com-top-header {
-            height       : 60px;
-            width        : 100%;
-            padding      : 0px;
-            margin-bottom: 10px;
-            position     : fixed;
-            z-index      : 1000;
-        }
 
         // 下方部分
         .com-main-area {
-            margin: 60px 20px 0 20px;
 
             .com-right-menu {
                 position        : fixed;
@@ -41,13 +29,13 @@
 
             .el-main {
                 padding         : 0 20px;
-                margin          : 0 20px;
+                margin          : 0 0 0 20px;
                 background-color: #fff;
                 margin-left     : 320px;
 
                 .main-container {
-                    height : calc(100vh - 60px);
-                    padding: 50px;
+                    min-height: calc(100vh - 60px);
+                    padding   : 50px;
                 }
             }
         }

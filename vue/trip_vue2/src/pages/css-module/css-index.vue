@@ -1,27 +1,21 @@
 <template>
   <div class="home-container">
-    <el-container>
-      <el-header class="com-top-header">
-        <ComTop></ComTop>
-      </el-header>
-      <el-container class="com-main-area">
-        <el-aside class="com-right-menu">
-          <Aside></Aside>
-        </el-aside>
-        <el-main>
-          <Main></Main>
-        </el-main>
-      </el-container>
+    <el-container class="com-main-area">
+      <el-aside class="com-right-menu">
+        <Aside></Aside>
+      </el-aside>
+      <el-main>
+        <Main></Main>
+      </el-main>
     </el-container>
   </div>
 </template>
 
 <script>
-import ComTop from "../com-top.vue";
 import Aside from "./css-aside.vue";
 import Main from "./css-main.vue";
 export default {
-  components: { ComTop, Aside, Main },
+  components: { Aside, Main },
   name: "CssIndex",
   data() {
     return {};

@@ -13,6 +13,10 @@ Vue.use(elementUi);
 // // Vue.prototype.$axios = axios;
 // Vue.use(VueAxios, axios);
 
+// 自定义指令
+import vLazy from './self-directive/v-lazy';
+Vue.use(vLazy);
+
 // http请求
 import { post, get, filePost } from './core/http'
 //定义全局变量

@@ -16,7 +16,7 @@ export default {
   },
   mounted: function () {
     let _self = this;
-    this.$post(`${commonJs.URL}/wbs`); // 请求服务器开启websocket
+    this.$post(`${commonJs.URL}/jsModule/wbs`); // 请求服务器开启websocket
 
     var ws = new WebSocket("ws://localhost:4399");
     ws.onopen = function () {

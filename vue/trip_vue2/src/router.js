@@ -9,7 +9,7 @@ import cssModule from './pages/css-module/css-index.vue';
 import JsModule from './pages/js-module/js-index.vue';
 
 //第三方库需要use一下才能用
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 
 //定义routes路由的集合，数组类型
 const routeList = [
@@ -21,6 +21,13 @@ const routeList = [
     { path: '/js-module', component: JsModule },
     { path: '*', redirect: 'home' },
 ]
+
+//获取原型对象上的push函数
+const originalPush = VueRouter.prototype.push
+//修改原型对象中的push方法 可以去除控制台点击路由重复报红
+VueRouter.prototype.push = function push(location) {
+    return originalPush.call(this, location).catch(err => err)
+}
 
 //实例化VueRouter并将routes添加进去
 const router = new VueRouter({

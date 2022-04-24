@@ -120,7 +120,7 @@ export default {
     width: 200px;
     height: 200px;
     border: 3px solid red;
-    float: left;
+    // float: left;
   }
   .second {
     width: 200px;
